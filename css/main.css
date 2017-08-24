@@ -1,0 +1,119 @@
+html, body, h1, h2, header, footer, nav, div, span, p, ul, li {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+header, footer, nav {
+	display: block;
+}
+ul {
+	overflow: hidden;
+}
+ul li {
+	list-style: none;
+	float: left;
+}
+header {
+	padding: 10px 30px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 22px;
+}
+.clsClearLeft {
+	clear: left;
+}
+.clsClearRight {
+	clear: right;
+}
+.clsMain {
+	font: 14px normal;
+	font-family: sans-serif, arial;
+}
+.clsMain header h1 {
+	color: #f55555;
+	font-size: 40px;
+    padding: 5px 10px;
+}
+.clsMain .clsContent {
+	min-height: 450px;
+	border: 1px solid #f3f0f0;
+	background: #f5f5f5;
+	width: 95%;
+    margin: 0 auto;
+}
+.clsMain .clsContent nav ul {
+	border-bottom: 1px solid #dddddd;
+}
+.clsMain .clsContent nav li {
+	font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+.clsMain .clsContent nav li.clsActive {	
+	color: #f55555;
+	border-bottom: 1px solid #f55555;
+    margin: 10px 10px 0 20px;
+}
+.clsMain .clsContent .clsTicketContent {
+	padding: 30px 0 10px 5%;
+}
+.clsMain .clsContent .clsTicketContent .clsTicketBlock li {
+	cursor: pointer;
+	display: inline-block;
+	height: 90px;
+    margin-right: 10px;
+	margin-bottom: 10px;
+	width: 7%;
+}
+.clsMain .clsContent .clsTicketContent .clsTicketBlock li.clsAvailable {
+	border: 1px solid green;
+	background: green;
+}
+.clsMain .clsContent .clsTicketContent .clsTicketBlock li.clsReserved {
+	border: 1px solid orange;
+	background: orange;
+}
+.clsMain .clsContent .clsTicketContent .clsTicketBlock li.clsBooked {
+	border: 1px solid red;
+	background: red;
+}
+.clsMain .clsContent .clsTicketContent .clsReservInfo {
+	padding-bottom: 5px;
+    word-wrap: break-word;
+    width: 95%;
+}
+.clsMain .clsContent .clsActionBtns {
+	padding-bottom: 5px;
+	text-align: center;
+}
+.clsMain .clsContent .clsBookBtn:first-child {
+	margin-right: 10px;
+}
+.clsMain .clsContent .clsBookBtn {
+    border: #f55555;
+    background: #f55555;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+	color: #f55555;
+	padding:10px 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 1120px) {
+	.clsMain .clsContent .clsTicketContent {
+		padding: 10px 0 10px 3%;
+	}
+	.clsMain .clsContent .clsTicketContent .clsTicketBlock li {
+		width: 6.5%;
+		height: 50px;
+	}
+	.clsMain .clsContent {
+	    min-height: 400px;
+	}
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ticket Reservation system</title>
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<script src="js/lib/angular.min.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+	</head>
+	<body data-ng-app="myApp">
+		<div class="clsMain" data-ng-controller="reservaionCtrl">
+			<header>
+				<h1>Ticket Reservation System</h1>
+			</header>
+			
+			<div class="clsContent">
+				<nav>
+					<ul>
+						<li class="clsActive">Pick your seats</li>
+					</ul>
+				</nav>
+				
+				<div class="clsTicketContent">
+					<ul class="clsTicketBlock">
+						<li data-ng-repeat="ticket in tickets" class="{{ticket.cls}}" data-ticket-no="{{ticket.value}}" data-ng-click="doReserve(ticket.value)">
+							
+						</li>
+					</ul>
+					<p class="clsReservInfo">You reserved {{reservedCount}} tickets<span data-ng-if="selectedSeatNo.length > 0">: {{selectedSeatNo}}</span></p>
+				</div>
+				
+				<div class="clsActionBtns">
+					<a href="" data-ng-click="doBooking()" class="clsBookBtn">Book</a>
+					<a href="" data-ng-click="clearBooking()" class="clsBookBtn" data-ng-if="!isHideClearBtn">Clear All Bookings</a>
+				</div>
+				<div class="clsClearRight">&nbsp;</div>
+			</div>
+			
+			<footer>
+				<p>Copyright &copy; 2017</p>
+			</footer>
+		</div>
+	</body>
+</html>
